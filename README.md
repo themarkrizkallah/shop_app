@@ -8,12 +8,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to have [Python](https://www.python.org/downloads/) and [Django](https://docs.djangoproject.com/en/2.1/topics/install/) installed.
 
-### Installing
-Installation is very simple, simply run the following command:
-```
-$ unzip -a mark-dev-challenge.zip
-```
-
 ## Running the server
 ```
 $ cd mark-dev-challenge
