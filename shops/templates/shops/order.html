@@ -1,0 +1,14 @@
+{% if order %}
+    <p><b>Order #</b>: {{order.order_num}}<p>
+    {% if items %}
+        <ol>
+            {% for item in items %}
+            <li>{{item}} - <a href="{% url 'shops:product' shop_id item.product.id %}">product page</a></li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No items added to this order.</p>
+    {% endif %}
+{% else %}
+    <p>Order info unavailable, please try again.</p>
+{% endif %}

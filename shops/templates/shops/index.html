@@ -1,0 +1,9 @@
+{% if shops_list %}
+    <ul>
+    {% for shop in shops_list %}
+        <li><a href="{% url 'shops:shop' shop.id %}">{{ shop.shop_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No shops available.</p>
+{% endif %}

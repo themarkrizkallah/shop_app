@@ -1,0 +1,5 @@
+{% if product %}
+<p><b>{{product.product_name}}</b>: ${{product.value}}<p>
+{% else %}
+    <p>Product info unavailable, please try again.</p>
+{% endif %}

@@ -1,0 +1,9 @@
+{% if shop %}
+    <h2>{{shop.shop_name}}</h2>
+    <ul>
+        <li><a href="{% url 'shops:products' shop.id %}">Products</a></li>
+        <li><a href="{% url 'shops:orders' shop.id %}">Orders</a></li>
+    </ul>
+{% else %}
+    <p>Shop info. unavailable</p>
+{% endif %}

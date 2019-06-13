@@ -1,0 +1,10 @@
+{% if orders_list %}
+    <h2>Orders:</h2>
+    <ol>
+    {% for order in orders_list %}
+        <li><b>Order #:</b> <a href="{% url 'shops:order' shop_id order.id %}">{{ order.order_num }}</a></li>
+    {% endfor %}
+    </ol>
+{% else %}
+    <p>No orders available.</p>
+{% endif %}
