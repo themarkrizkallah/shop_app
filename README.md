@@ -192,39 +192,6 @@ order1.delete()
 ```
 
 ## Database
-I have a *PostgreSQL* database instance on *Amazon RDS*. I populated the database with values for you to test; however, feel free to add your own either through the *admin* dashboard or through a *shell*.
+I had a *PostgreSQL* database instance on *Amazon RDS* but it is no longer active.
+Check [shop_app/settings.py](shop_app/settings.py) for information.
 
-If you need direct access to the database, check [shopify_dev/settings.py](shop_app/settings.py) for information.
-
-## Deployment
-I deployed the web API to *Google Kubernetes Engine (GKE)*.
-I have attached the [shops.yaml](shops.yaml) and [Dockerfile](Dockerfile). The pods are running and are not logging any errors.
-
-```
-$ kubectl get pods
-
-NAME                     READY     STATUS    RESTARTS   AGE
-shops-66567974bd-b4jww   1/1       Running   6          2h
-shops-66567974bd-v6tzt   1/1       Running   6          2h
-shops-66567974bd-v92x6   1/1       Running   6          2h
-```
-
-That being said, entering the [http://35.188.150.137/](http://35.188.150.137/) in the browser does not work.
-
-
-**Example** of what happens when I try to connect via the terminal:
-```
-$ kubectl get services shops
-
-NAME      TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)        AGE
-shops     LoadBalancer   10.55.242.133   35.188.150.137   80:31830/TCP   2h
-
-$ curl 35.188.150.137
-curl: (7) Failed to connect to 35.188.150.137 port 80: Connection refused
-```
-
-## Built With
-
-* [Django](https://www.djangoproject.com/) - Powered the server-side web api
-* [PostgreSQL](https://www.postgresql.org/) - Database system
-* [AWS](https://aws.amazon.com/) - Amazon RDS used to host the database instance
