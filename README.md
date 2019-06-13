@@ -10,7 +10,7 @@ You need to have [Python](https://www.python.org/downloads/) and [Django](https:
 
 ## Running the server
 ```
-$ cd mark-dev-challenge
+$ cd shop_app
 $ python3 manage.py runserver
 ```
 
